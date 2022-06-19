@@ -40,7 +40,7 @@ class UserValidation {
         next()
     }
 
-    verifyPass(req, res, next) {
+    async verifyPass(req, res, next) {
         if (req.body.password && req.body.password.length < 6)
             return res.status(400).json({ error: 'A senha deve conter no minímo 6 caracteres!' })
 

@@ -12,10 +12,10 @@ class UserController {
             return res.status(404).json({ error: 'E-mail não encontrado!' })
 
         if (await bcryptjs.compare(password, user.password)) {
-            const [ idUser, nameUser, emailUser ] = [ user._id, user.name, user.email ]
+            const [ idUser, nameUser ] = [ user.id, user.name ]
 
             const token = jwt.sign(
-                { idUser, nameUser, emailUser },
+                { idUser, nameUser },
                 `${process.env.JWT_SECRET_TOKEN}`,
                 { expiresIn: `${process.env.JWT_EXPIRES}` }
             )

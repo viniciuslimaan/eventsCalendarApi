@@ -14,6 +14,7 @@ git clone https://github.com/viniciuslimaan/eventsCalendarApi.git
     * Express
     * Mongoose
     * Nodemon / devDependencies
+    * Date-fns
     * Jonwebtoken
     * Bcryptjs
     * Validator
